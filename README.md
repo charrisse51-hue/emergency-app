@@ -100,6 +100,15 @@ Displays account info, emergency contacts, notification toggles, app permissions
 
 - `Change Password` opens change-password screen.
 - `Privacy & Security` opens dedicated privacy-security controls screen.
+- `Barangay` opens registered barangay information screen.
+
+## Barangay Information UI
+
+Displays the currently registered barangay, boundary map preview, and re-verification notice.
+
+### Code location
+
+- `Frontend/Mobile/lib/screens/home/barangay_information_screen.dart`
 
 ## Change Password UI
 

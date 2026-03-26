@@ -160,6 +160,12 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Manage your account & preferences'), findsOneWidget);
+    await tester.tap(find.text('Barangay'));
+    await tester.pumpAndSettle();
+    expect(find.text('Barangay Information'), findsOneWidget);
+    expect(find.text('Your registered location'), findsOneWidget);
+    await tester.tap(find.byIcon(Icons.arrow_back).first);
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Change Password'));
     await tester.pumpAndSettle();
     expect(find.text('Change Password'), findsOneWidget);

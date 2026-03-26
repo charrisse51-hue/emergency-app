@@ -41,3 +41,5 @@
 - Added `Frontend/Mobile/lib/screens/home/change_password_screen.dart` and wired successful submit to existing `PasswordUpdatedScreen`.
 - Wired settings routes for `Change Password` and `Privacy & Security`, with widget-test coverage for password-change success flow.
 - Updated Dart SDK constraint in `pubspec.yaml` to `>=3.3.0 <4.0.0` for broader Flutter-toolchain compatibility.
+- Added `Frontend/Mobile/lib/screens/home/barangay_information_screen.dart` for registered barangay details and notice UI.
+- Wired settings `Barangay` tile to open barangay-information screen with widget-test coverage.

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'barangay_information_screen.dart';
 import 'change_password_screen.dart';
 import 'privacy_security_screen.dart';
 
@@ -93,11 +94,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
               const Text('Account Information', style: TextStyle(fontWeight: FontWeight.w600)),
               const SizedBox(height: 6),
               _sectionCard(
-                child: const Column(
+                child: Column(
                   children: [
-                    _ArrowTile(icon: Icons.phone_outlined, label: 'Phone Number', subtitle: '+63 945 263 1008'),
-                    Divider(height: 14),
-                    _ArrowTile(icon: Icons.home_outlined, label: 'Barangay', subtitle: 'Poblacion Oeste, Dagupan City'),
+                    const _ArrowTile(icon: Icons.phone_outlined, label: 'Phone Number', subtitle: '+63 945 263 1008'),
+                    const Divider(height: 14),
+                    _ArrowTile(
+                      icon: Icons.home_outlined,
+                      label: 'Barangay',
+                      subtitle: 'Poblacion Oeste, Dagupan City',
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (context) => const BarangayInformationScreen(),
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),

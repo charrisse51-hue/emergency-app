@@ -1,0 +1,43 @@
+# Changelog
+
+## 2026-03-26
+
+- Added a new Flutter login screen UI based on the provided EmergencyLink design.
+- Wired image assets from `assets/logo/` and `assets/image-assets/` through `pubspec.yaml`.
+- Added widget tests for login rendering and validation behavior.
+- Moved the login UI into `Frontend/Mobile/lib/screens/home/login_screen.dart` to match the requested Frontend/Mobile folder structure.
+- Added `Frontend/Mobile/lib/screens/verification/forgot_password_screen.dart` with the requested forgot-password mobile UI.
+- Connected `Forgot Password?` navigation from login and added a widget test for route transition.
+- Added `Frontend/Mobile/lib/screens/verification/verify_number_screen.dart` with the requested verify-number mobile UI.
+- Connected forgot-password flow to verify-number and added a widget test for this route transition.
+- Added `Frontend/Mobile/lib/screens/verification/verified_success_screen.dart` for the final verified confirmation UI.
+- Connected verify-number flow to verified-success and added a widget test for the final route transition.
+- Added `Frontend/Mobile/lib/screens/verification/create_new_password_screen.dart` with password requirement and reset form UI.
+- Updated verify-number flow so `Verify Code` opens create-new-password, and added regression tests for this route and validation.
+- Added `Frontend/Mobile/lib/screens/verification/password_updated_screen.dart` for the password-reset success state.
+- Updated create-new-password flow so valid `Reset Password` opens password-updated, with widget test coverage.
+- Added `Frontend/Mobile/lib/screens/auth/create_account_screen.dart` and connected `Sign up` from login.
+- Added `Frontend/Mobile/lib/screens/auth/account_created_screen.dart` and connected successful account creation flow.
+- Added regression tests for create-account navigation, validation, and account-created success state.
+- Added `Frontend/Mobile/lib/screens/verification/verify_doyong_residency_screen.dart` for post-signup location/residency verification UI.
+- Added `Frontend/Mobile/lib/screens/verification/outside_service_area_screen.dart` for the out-of-coverage fallback UI.
+- Updated create-account flow to route through residency verification before account-created, with widget tests for both success and outside-area navigation.
+- Added `Frontend/Mobile/lib/screens/home/home_screen.dart` based on the provided mobile dashboard UI.
+- Placed notifications action at the upper-right of the home header and routed account-created completion to home screen.
+- Added `Frontend/Mobile/lib/screens/home/emergency_report_screen.dart` for the emergency report form UI.
+- Wired home `Help` button to open emergency report and added widget-test coverage for this navigation.
+- Refined emergency report UI styling to match updated design (recording indicator, active recording panel, and green selected media states).
+- Added `Frontend/Mobile/lib/screens/home/emergency_tracking_screen.dart` based on the provided tracking mock.
+- Wired `Submit Emergency Report` to open emergency tracking and added widget-test coverage for this transition.
+- Added `Frontend/Mobile/lib/screens/home/report_history_screen.dart` based on the provided report history mock.
+- Wired home bottom-nav `Reports` to open report history and added widget-test assertions for this navigation.
+- Added `Frontend/Mobile/lib/screens/home/report_details_screen.dart` based on the provided report-details mock.
+- Wired report-history cards to open report details and extended widget-test coverage for this drill-down flow.
+- Added `Frontend/Mobile/lib/screens/home/notifications_screen.dart` based on the provided notifications mock.
+- Wired notifications access from home header and bottom nav, plus widget-test coverage for the notifications route.
+- Added `Frontend/Mobile/lib/screens/home/settings_screen.dart` based on the provided settings mock.
+- Wired home bottom-nav `Settings` to open the settings screen.
+- Added `Frontend/Mobile/lib/screens/home/privacy_security_screen.dart` for privacy and security controls.
+- Added `Frontend/Mobile/lib/screens/home/change_password_screen.dart` and wired successful submit to existing `PasswordUpdatedScreen`.
+- Wired settings routes for `Change Password` and `Privacy & Security`, with widget-test coverage for password-change success flow.
+- Updated Dart SDK constraint in `pubspec.yaml` to `>=3.3.0 <4.0.0` for broader Flutter-toolchain compatibility.
